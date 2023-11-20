@@ -1,4 +1,4 @@
 pandas
 app_store_scraper
 google_play_scraper
-numpys
+numpy
