@@ -12,7 +12,8 @@ This project consists of a Python script designed to scrape reviews from the Goo
 ```
 git clone https://github.com/KrishAryan/app-review-scraper.git
 ```
-2. **Building the Docker Image**
+2. Modify review_scraper.py according to needs
+3. **Building the Docker Image**
 ```
 docker build -t review-scraper .
 ```
