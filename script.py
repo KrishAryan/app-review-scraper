@@ -15,8 +15,10 @@ apple_reviews = AppStore(country='in', app_name='devrev') #enter app name from a
 apple_reviews.review(how_many=100) #manipulate to control the number of apple_reviews scraped
 
 
-# print(google_reviews)
-# df = pd.DataFrame(np.array(apple_reviews.reviews),columns=['review'])
-# df2 = df.join(pd.DataFrame(df.pop('review').tolist()))
-# df2.head()
-# df2.to_csv('/home/krish/Desktop/review.csv')
+# Convert Google Play reviews to a DataFrame and save as CSV
+df_google = pd.DataFrame(google_reviews)
+df_google.to_csv('google_play_reviews.csv', index=False)
+
+# Convert Apple Store reviews to a DataFrame and save as CSV
+df_apple = pd.DataFrame(apple_reviews.reviews)
+df_apple.to_csv('apple_app_store_reviews.csv', index=False)
