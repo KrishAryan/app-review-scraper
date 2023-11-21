@@ -12,8 +12,8 @@ while ((docker inspect -f '{{.State.Running}}' $CONTAINER_NAME) -eq "true") {
 }
 
 # Copy files from the container to the host
-docker cp "$CONTAINER_NAME:/usr/src/app/google_play_reviews.csv" "."
-docker cp "CONTAINER_NAME:/usr/src/app/apple_play_store_reviews.csv" "."
+docker cp "${CONTAINER_NAME}:/usr/src/app/google_play_reviews.csv" "."
+docker cp "${CONTAINER_NAME}:/usr/src/app/apple_app_store_reviews.csv" "."
 
 # Optionally remove the container
 docker rm $CONTAINER_NAME
