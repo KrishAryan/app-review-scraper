@@ -37,5 +37,5 @@ chmod +x run_and_copy.sh
 1. Open PowerShell and navigate to the directory containing the script.
 2. **Execute the PowerShell script:**
 ```
-.\RunAndCopy.ps1
+.\run_and_copy.ps1
 ```
