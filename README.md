@@ -5,7 +5,7 @@ This project consists of a Python script designed to scrape reviews from the Goo
 
 ## Prerequisites
 - Docker
-- Python (if running locally)
+- Python with libraries mentioned in requirements.txt (if running locally)
 
 ## Installation
 1. **Clone the Repository**
