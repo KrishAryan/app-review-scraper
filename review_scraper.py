@@ -1,17 +1,18 @@
 from app_store_scraper import AppStore
-from google_play_scraper import reviews_all,Sort,app
+from google_play_scraper import reviews,Sort,app
 import pandas as pd
 import numpy as np
 
 #google playstore reviews scraper
-google_reviews=reviews_all(
+google_reviews,continuation_token=reviews(
     "ai.devrev.mobile", #enter app id from playstore url
     country='in', #manipulate to change the country to scrape from, defaults to us
     count=100, #manipulate to control the number of google_reviews scraped
     )
 
+
 #apple appstore reviews scraper
-apple_reviews = AppStore(country='in', app_name='devrev') #enter app name from app store url and change country from here
+apple_reviews = AppStore(country='in', app_name='devrev',app_id='1615543395') #enter app name from app store url and change country from here
 apple_reviews.review(how_many=100) #manipulate to control the number of apple_reviews scraped
 
 
